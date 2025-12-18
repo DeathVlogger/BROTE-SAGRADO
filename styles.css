@@ -1,0 +1,408 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Tipografías simples y legibles [cite: 50] */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2E7D32; /* Verde fuerte */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Botón estilo "Ver producto" */
+.btn-primary {
+    background-color: #2E7D32; /* Verde ecológico  */
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1B5E20;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+    height: 100vh;
+    /* Simulamos la imagen de plantas/jardín con un gradiente por ahora [cite: 6] */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #fff;
+    color: #2E7D32;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Sección de Iconos */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background-color: #f9fdf9; /* Tono verde muy claro  */
+    flex-wrap: wrap;
+}
+
+.feature-item h3 {
+    color: #2E7D32;
+    font-size: 1.2rem;
+}
+/* --- Estilos de la Sección Producto --- */
+
+.product-details {
+    padding: 60px 5%;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Imagen */
+.product-img-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-product-img {
+    max-width: 100%;
+    width: 300px; /* Tamaño ideal para que no ocupe toda la pantalla */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.2); /* Sombra verde suave */
+}
+
+/* Tarjetas de información */
+.info-card {
+    background-color: #f1f8f1; /* Verde muy pálido */
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 5px solid #2E7D32; /* Línea decorativa a la izquierda */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-card h3 {
+    color: #1B5E20;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.info-card ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.info-card li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Estilo especial para ingredientes */
+.ingredients-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.ingredients-list li {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    list-style: none; /* Quitamos los puntos predeterminados */
+    text-align: center;
+    color: #2E7D32;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* --- Estilos del Logo y Texto --- */
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Esto alinea verticalmente el logo con el texto */
+    text-decoration: none;
+    gap: 10px; /* Espacio entre la imagen y la letra E */
+}
+
+.logo-img {
+    height: 50px; /* Un poco más pequeño para que combine bien con el texto */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-text {
+    font-size: 1.5rem; /* Tamaño de letra del nombre */
+    font-weight: 600;  /* Grosor de la letra */
+    color: #2E7D32;    /* El mismo verde ecológico de antes */
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-container:hover .logo-img {
+    transform: rotate(10deg); /* Un efecto divertido: el logo gira un poco al pasar el mouse */
+}
+/* --- Sección Cómo Funciona --- */
+
+.how-it-works {
+    padding: 80px 5%;
+    background-color: #f9fdf9; /* Fondo muy suave para diferenciar secciones */
+    text-align: center;
+}
+
+.how-it-works h2 {
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Cuadrícula de pasos */
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.process-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid #2E7D32; /* Detalle verde abajo */
+}
+
+.process-card:hover {
+    transform: translateY(-5px); /* Efecto de flotar al pasar el mouse */
+}
+
+.step-number {
+    background-color: #2E7D32;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 15px auto; /* Centrado */
+}
+
+.process-card h3 {
+    color: #1B5E20;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.process-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Caja de resumen final */
+.summary-box {
+    background-color: #e8f5e9; /* Verde más intenso que el fondo */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #c8e6c9;
+}
+
+.summary-box p {
+    color: #2E7D32;
+}
+/* --- Sección Conócenos --- */
+.about-us {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.mvv-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.mvv-card {
+    background: #f9fdf9;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-top: 5px solid #2E7D32;
+}
+
+.mvv-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.mvv-card h3 {
+    color: #1B5E20;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Estilos para Valores */
+.values-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #e8f5e9;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-heart {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.values-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+}
+
+.values-list strong {
+    color: #2E7D32;
+}
+
+/* --- Sección de Contacto y WhatsApp --- */
+.contact-section {
+    background-color: #2E7D32; /* Fondo verde fuerte */
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.contact-details {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.email-box a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Color oficial de WhatsApp */
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+.wa-icon {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
